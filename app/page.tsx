@@ -1,9 +1,12 @@
 import Image from "next/image";
+import { Content } from "./main";
 
 export default function Home() {
+  //localhost:3002/api/register
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>Hello this is the homepage, so you want to login?</div>
+      <Content />
     </main>
   );
 }
