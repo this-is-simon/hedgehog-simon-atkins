@@ -3,25 +3,61 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  --white-light:226, 232, 240; /* #ffffff */
+  --white-dark: 148, 163, 184; /* #ffffff */
+  --cyan-mid: 0, 232, 255; /* #00e8ff */
+  --magenta-mid: 255, 0, 117; /* #ff0075 */
+  --black-dark: 1, 1, 1;
+  --blue-dark: 15, 23, 42;
+  --green-transparent: 45, 212, 191, 0.2;
+  --green: 94, 234, 212;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --text-color: rgb(var(--white-dark));
+  --highlight-text-color: rgb(var(--white-light));
+  --secondary-text-color: rgb(var(--white-mid));
+  --unvisited-link-color: rgb(var(--cyan-mid));
+  --focus-link-color: rgb(var(--cyan-mid));
+  /* --skill-pill-color: rgba(var(--green-transparent));
+  --skill-text-color: rgba(var(--green)); */
+
+  /* spacing */
+  --spacing-unit: 16px;
+  --spacing-xxs: calc(0.25 * var(--spacing-unit)); /* 4px */
+  --spacing-xs: calc(0.5 * var(--spacing-unit)); /* 8px */
+  --spacing-sm: calc(0.75 * var(--spacing-unit)); /* 12px */
+  --spacing-md: calc(1 * var(--spacing-unit)); /* 16px */
+  --spacing-lg: calc(2 * var(--spacing-unit)); /* 32px */
+  --spacing-xl: calc(3.25 * var(--spacing-unit)); /* 52px */
+  --spacing-xxl: calc(5.25 * var(--spacing-unit)); /* 84px */
+  --spacing-xxxl: calc(6.25 * var(--spacing-unit)); /* 100px */
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  color: var(--text-color);
+  background: rgb(var(--blue-dark));
 }
+
+a {
+  text-decoration: none;
+  margin: 0;
+  color: rgb(var(--green));
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: var(--focus-link-color);
+  opacity: 0.8;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+
